@@ -437,6 +437,8 @@ def generate_dev_handles(preliminary_elf_path):
         "$SOURCE",
         "--zephyr-base",
         FRAMEWORK_DIR,
+		"--start-symbol",
+		"__device_start",
     )
 
     return env.Command(
